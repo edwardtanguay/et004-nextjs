@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Noun } from '../../../typings';
+import * as tools from '../../../tools';
 
 const url = 'https://edwardtanguay.vercel.app/share/germanNouns.json';
 
@@ -11,7 +12,8 @@ type Params = {
 };
 
 async function Noun({ params: { idCode } }: Params) {
-	const nouns: Noun[] = (await axios.get(url)).data;
+	const rawNouns: Noun[] = (await axios.get(url)).data;
+	const nouns: Noun[] = tools.randomize(rawNouns); 
 	const rawNoun: Noun | undefined = nouns.find((m) => m.singular === idCode);
 	let noun: Noun =
 		rawNoun === undefined
