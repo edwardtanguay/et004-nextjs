@@ -1,2 +1,3 @@
-- ... create a link from singular to show link to singular page
-	- Ampel --> "localhost:3001/nouns/Ampel"
+- x create a link from singular to show link to singular page
+	- x Ampel --> "localhost:3001/nouns/Ampel"
+	- .. in Noun.tsx, fetch all nouns and pull one noun out
