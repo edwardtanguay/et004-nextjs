@@ -1,11 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
-export type Noun = {
-	article: string;
-	singular: string;
-	plural: string;
-};
+import { Noun } from '../../typings';
 
 const url = 'https://edwardtanguay.vercel.app/share/germanNouns.json';
 
