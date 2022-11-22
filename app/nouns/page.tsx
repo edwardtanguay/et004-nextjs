@@ -1,7 +1,13 @@
 import React from 'react';
+import NounsList from './NounsList';
 
 function Nouns() {
-	return <div>This is the nouns page.</div>;
+	return (
+		<>
+			<h2 className="text-3xl pb-4">Nouns</h2>
+			<NounsList />
+		</>
+	);
 }
 
 export default Nouns;
